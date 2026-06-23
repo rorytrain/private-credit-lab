@@ -1,0 +1,14 @@
+Triaging sample_cim.txt...
+  Score: 7 | Project Apex | Enterprise Software (Cloud ERP / Mid-Market Manufacturing)
+Triaging sample_cim_2.txt...
+  Score: 7 | Project Apex | Enterprise Software (SaaS / ERP)
+Triaging sample_cim_3.txt...
+  Score: 1 | Project Meridian | Petrol Station & Convenience Retail
+
+One observation worth noting. Both Project Apex variants scored 7 this run. Previously Version A scored 6. That is the temperature=0 setting doing its job — but it also surfaces a genuine analytical question about whether the two deals are truly equivalent. Version A has a $65m facility with a dividend recap. Version B has a $50m facility with growth capital deployment. A score of 7 for both is arguably too generous to Version A. That is a prompt refinement candidate for Day 6's stress testing session.
+
+Hmm. "Temperature zero makes the model predictable but does not make it correct — if the prompt is ambiguous, it will predictably misinterpret it every time." Surely that is both prompt and a temperature adjustment and refinement.
+
+Temperature controls variance. Prompt controls direction. You need both levers and they are not substitutes for each other. A well-constructed prompt at temperature 0.7 will outperform an ambiguous prompt at temperature zero every time — because variance around the wrong target is still wrong. The optimal configuration is a precise prompt at low temperature: you are pointing the model accurately and then removing the wobble.
+The scoring inconsistency between Version A and Version B illustrates exactly that. Temperature zero locked in a number but the prompt did not give the model enough discriminating instruction to differentiate a dividend recap from a growth capital deployment at the scoring level. The direction was slightly off and the model reproduced that error reliably. That is your Day 6 refinement — tighten the mandate fit scoring rubric to explicitly weight use of proceeds as a scoring variable, not just a flag.
+
