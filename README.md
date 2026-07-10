@@ -29,4 +29,4 @@ Prompts are structured to be declarative and mandate-specific, producing consist
 
 ## Status
 
-Days 01 and 02 complete.
+Days 01 to 03 complete.
