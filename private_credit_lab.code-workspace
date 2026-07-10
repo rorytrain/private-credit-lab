@@ -5,6 +5,9 @@
 		},
 		{
 			"path": "day02"
+		},
+		{
+			"path": "day03"
 		}
 	],
 	"settings": {}
