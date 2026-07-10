@@ -1,0 +1,143 @@
+{
+  "agreement_a": {
+    "borrower": "Project Apex Holdings Limited",
+    "facility_m": 65,
+    "covenants": {
+      "leverage_initial_x": 4.5,
+      "leverage_steady_state_x": 4.0,
+      "min_liquidity_m": 3.0,
+      "max_capex_m": 4.0,
+      "restricted_payments_leverage_threshold_x": 3.5,
+      "restricted_payments_min_liquidity_m": 5.0,
+      "monthly_reporting_days": 30,
+      "quarterly_reporting_days": 45,
+      "annual_reporting_days": 120,
+      "cure_period_days": 30,
+      "equity_cure_permitted": false
+    }
+  },
+  "agreement_b": {
+    "borrower": "Harrier Software Group Limited",
+    "facility_m": 58,
+    "covenants": {
+      "leverage_initial_x": 5.25,
+      "leverage_steady_state_x": 4.75,
+      "min_liquidity_m": 1.5,
+      "max_capex_m": 7.5,
+      "restricted_payments_leverage_threshold_x": 4.5,
+      "restricted_payments_min_liquidity_m": 2.0,
+      "monthly_reporting_days": 45,
+      "quarterly_reporting_days": 60,
+      "annual_reporting_days": 150,
+      "cure_period_days": 45,
+      "equity_cure_permitted": true
+    }
+  },
+  "deviations": [
+    {
+      "covenant": "leverage_initial_x",
+      "agreement": "agreement_b",
+      "internal_standard": "4.5x",
+      "actual": "5.25x",
+      "severity": "HIGH",
+      "note": "Agreement B permits initial leverage of 5.25x, representing a 75bps breach of the 4.5x internal maximum. This materially increases default risk at inception and provides significantly less headroom for underperformance."
+    },
+    {
+      "covenant": "leverage_steady_state_x",
+      "agreement": "agreement_b",
+      "internal_standard": "4.0x",
+      "actual": "4.75x",
+      "severity": "HIGH",
+      "note": "Steady-state leverage of 4.75x exceeds the internal standard of 4.0x by 75bps, meaning the borrower is permitted to remain structurally more leveraged on an ongoing basis. This represents a persistent and unmitigated elevation in credit risk."
+    },
+    {
+      "covenant": "min_liquidity_m",
+      "agreement": "agreement_b",
+      "internal_standard": "$2.5m",
+      "actual": "$1.5m",
+      "severity": "HIGH",
+      "note": "Minimum liquidity of $1.5m is $1.0m below the internal standard of $2.5m, materially reducing the liquidity buffer available to service obligations in a stress scenario. Additionally, liquidity is tested only quarterly rather than monthly, further weakening lender protection."
+    },
+    {
+      "covenant": "max_capex_m",
+      "agreement": "agreement_b",
+      "internal_standard": "$5.0m",
+      "actual": "$7.5m",
+      "severity": "MEDIUM",
+      "note": "Annual capex is permitted up to $7.5m versus the internal standard of $5.0m, a 50% excess that could accelerate cash burn and impair debt service capacity. This is particularly concerning given the already elevated leverage profile in Agreement B."
+    },
+    {
+      "covenant": "restricted_payments_leverage_threshold_x",
+      "agreement": "agreement_b",
+      "internal_standard": "3.5x",
+      "actual": "4.5x",
+      "severity": "HIGH",
+      "note": "Agreement B permits restricted payments at leverage up to 4.5x, which is 100bps above the internal standard of 3.5x and actually above the internal steady-state leverage ceiling. This allows cash leakage to equity holders at leverage levels the internal standard considers unsafe."
+    },
+    {
+      "covenant": "restricted_payments_min_liquidity_m",
+      "agreement": "agreement_b",
+      "internal_standard": "$4.0m",
+      "actual": "$2.0m",
+      "severity": "HIGH",
+      "note": "The post-payment liquidity floor for restricted payments is $2.0m, which is $2.0m below the internal standard of $4.0m and also below the internal minimum liquidity standard of $2.5m. This creates a scenario where distributions could be made while the business is in a liquidity-stressed position."
+    },
+    {
+      "covenant": "restricted_payments_min_liquidity_m",
+      "agreement": "agreement_a",
+      "internal_standard": "$4.0m",
+      "actual": "$5.0m",
+      "severity": "LOW",
+      "note": "Agreement A sets a post-payment liquidity floor of $5.0m for restricted payments, which is $1.0m above the internal standard of $4.0m. This is a favourable deviation that provides additional lender protection."
+    },
+    {
+      "covenant": "monthly_reporting_days",
+      "agreement": "agreement_b",
+      "internal_standard": "30 days",
+      "actual": "45 days",
+      "severity": "MEDIUM",
+      "note": "Monthly management accounts are due within 45 days under Agreement B, which is 15 days beyond the internal standard of 30 days. This significantly delays the lender's ability to identify and respond to emerging financial deterioration."
+    },
+    {
+      "covenant": "quarterly_reporting_days",
+      "agreement": "agreement_b",
+      "internal_standard": "45 days",
+      "actual": "60 days",
+      "severity": "MEDIUM",
+      "note": "Quarterly compliance certificates are due within 60 days, exceeding the internal standard of 45 days by 15 days. Combined with the monthly reporting delay, this creates a materially weakened information flow to the lender."
+    },
+    {
+      "covenant": "annual_reporting_days",
+      "agreement": "agreement_b",
+      "internal_standard": "120 days",
+      "actual": "150 days",
+      "severity": "MEDIUM",
+      "note": "Annual audited accounts are permitted up to 150 days after year end, which is 30 days beyond the internal standard of 120 days. This delays the lender's annual credit review and covenant reset process."
+    },
+    {
+      "covenant": "cure_period_days",
+      "agreement": "agreement_b",
+      "internal_standard": "30 days",
+      "actual": "45 days",
+      "severity": "MEDIUM",
+      "note": "The cure period for financial covenant breaches is 45 days versus the internal standard of 30 days, extending the window during which the borrower is in breach without lender remedy. This reduces the lender's ability to act swiftly in a deteriorating credit situation."
+    },
+    {
+      "covenant": "equity_cure_permitted",
+      "agreement": "agreement_b",
+      "internal_standard": "false",
+      "actual": "true",
+      "severity": "HIGH",
+      "note": "Agreement B expressly permits equity cures, which is prohibited under the internal standard. Equity cures can mask underlying operational deterioration and delay enforcement action, with the 25% EBITDA cap providing only partial mitigation."
+    },
+    {
+      "covenant": "max_capex_m",
+      "agreement": "agreement_a",
+      "internal_standard": "$5.0m",
+      "actual": "$4.0m",
+      "severity": "LOW",
+      "note": "Agreement A restricts annual capex to $4.0m, which is $1.0m below the internal standard of $5.0m. This is a favourable deviation that provides tighter cash flow protection for the lender."
+    }
+  ],
+  "summary": "Agreement A (Project Apex) is broadly compliant with internal covenant standards, with all key financial covenants at or better than required thresholds, and represents an acceptable credit structure. Agreement B (Project Harrier) contains multiple high-severity deviations across leverage, liquidity, restricted payments, reporting, cure periods and equity cure provisions, collectively representing a materially weaker lender protection package. Agreement B should be escalated for senior credit committee review and renegotiation of key terms before execution, as the cumulative deviation profile creates significant downside risk relative to internal standards."
+}

@@ -1,0 +1,42 @@
+CREDIT AGREEMENT — PROJECT APEX
+Unitranche Term Loan Facility
+Date: June 2026
+
+PARTIES
+Borrower: Project Apex Holdings Limited
+Lender: Silverstone Credit Partners LP
+Facility Amount: $65,000,000
+
+FINANCIAL COVENANTS
+
+1. LEVERAGE COVENANT
+The Borrower shall not permit the Total Net Leverage Ratio to exceed:
+- 4.50x for the period ending September 2026
+- 4.25x for the period ending December 2026
+- 4.00x for any period thereafter
+Tested quarterly on a Last Twelve Months basis.
+
+2. MINIMUM LIQUIDITY
+The Borrower shall maintain minimum unrestricted cash and available
+revolving credit of no less than $3,000,000 at all times.
+Tested monthly.
+
+3. CAPITAL EXPENDITURE RESTRICTION
+Annual capital expenditure shall not exceed $4,000,000 in any
+financial year without prior written lender consent.
+
+4. RESTRICTED PAYMENTS TEST
+No dividend, distribution or shareholder payment shall be made unless:
+(a) No Event of Default is continuing or would result therefrom
+(b) Total Net Leverage Ratio is below 3.50x on a pro forma basis
+(c) Minimum liquidity of $5,000,000 is maintained post-payment
+
+REPORTING OBLIGATIONS
+Monthly management accounts: within 30 days of month end
+Quarterly compliance certificate: within 45 days of quarter end
+Annual audited accounts: within 120 days of financial year end
+
+EVENTS OF DEFAULT
+Standard events of default apply including payment default,
+covenant breach, insolvency and material adverse change.
+Cure period: 30 days for financial covenant breaches.
