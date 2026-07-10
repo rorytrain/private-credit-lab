@@ -1,8 +1,23 @@
 Day 1. Installed Python, VS Code and the Anthropic SDK on a clean machine. Set up a virtual environment scoped to the lab, funded the API console and confirmed the full connection stack with a test call. Built a CIM triage script that reads an unstructured document, assembles it into a structured prompt alongside a defined mandate profile and returns a scored JSON output via the Sonnet 4.6 API. Refined the prompt to cap flag length, which improved output fitness without losing analytical depth. Fixed a silent hardcode bug that was causing the script to ignore the command-line argument and always read the same file. Inspected the raw API envelope via Invoke-WebRequest — useful to see token consumption, stop reason and inference geography beneath the SDK abstraction. The core insight: the model is stateless and text-in text-out. Everything it knows about the mandate and the required output format lives in the prompt string. Prompt precision is the primary engineering lever.
 
+------------
+
 Key note: "There is no persistent memory on the API side". Actually here we also seem to be prompt engineering and agent framing so that the process leans toward being much more declarative and predictable. more temp zero.
 
 Temperature zero makes the model predictable but does not make it correct — if the prompt is ambiguous, it will predictably misinterpret it every time. Prompt constraints that encode the analytical logic mean the model can be both predictable and right. You could add temperature=0 explicitly to the client.messages.create() call and it would tighten the outputs marginally.
+
+In agentic AI workflows, a rubric is a structured framework of explicit criteria used to evaluate, govern, and verify agent behavior, moving beyond simple pass/fail metrics to assess nuance, safety, and reasoning.  Unlike traditional prompts that specify desired outputs, rubrics operationalize decision rules, defining what "good" looks like across dimensions such as specification alignment, integrity, and runtime correctness. 
+
+Key applications include:
+
+* Evaluation and Scoring: Rubrics enable consistent, auditable scoring of agent outputs by breaking down complex tasks into weighted criteria (e.g., file changes, tool use quality, hallucination checks), allowing for calibrated automated scoring and structured disagreement reviews. 
+* Verification and Governance: In coding agents, Agentic Rubrics involve an expert agent exploring a repository to generate context-grounded checklists, which are then used by a judge to score candidate patches without executing tests, surfacing failure modes that standard tests miss. 
+* Runtime Safety: Rubrics act as constraints that instruct agents on how to handle incomplete or ambiguous information, reducing hallucinations by defining explicit protocols for when to withhold answers or qualify statements. 
+* Platform Selection: Enterprises use evaluation rubrics to objectively assess AI agent platforms across critical dimensions like security, no-code building capabilities, and multi-agent coordination before deployment. 
+
+This approach transforms evaluation from a subjective "vibe check" into a repeatable, engineering-native process that supports continuous integration-style quality gates for agentic systems.
+
+------------
 
 The most telling output from the three-CIM validation run was the add-backs flag on Project Meridian. The script derived that $4.1m in management add-backs represented 28.7% of adjusted EBITDA, recomputed leverage on an unadjusted basis at 7.5x and flagged the gap — none of which was stated explicitly in the CIM. That is not keyword extraction. That is derived reasoning from sparse inputs, which is precisely where the model earns its place in a real workflow. A junior analyst might accept the headline 5.8x. The script did not.
 

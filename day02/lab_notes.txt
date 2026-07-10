@@ -12,3 +12,10 @@ Hmm. "Temperature zero makes the model predictable but does not make it correct 
 Temperature controls variance. Prompt controls direction. You need both levers and they are not substitutes for each other. A well-constructed prompt at temperature 0.7 will outperform an ambiguous prompt at temperature zero every time — because variance around the wrong target is still wrong. The optimal configuration is a precise prompt at low temperature: you are pointing the model accurately and then removing the wobble.
 The scoring inconsistency between Version A and Version B illustrates exactly that. Temperature zero locked in a number but the prompt did not give the model enough discriminating instruction to differentiate a dividend recap from a growth capital deployment at the scoring level. The direction was slightly off and the model reproduced that error reliably. That is your Day 6 refinement — tighten the mandate fit scoring rubric to explicitly weight use of proceeds as a scoring variable, not just a flag.
 
+-----------------------------
+
+A working API connection and mandate-parameterised triage script. A batch ingestion loop processing three deals with CSV output and full request logging. A validated three-document test set covering a borderline pass, a cleaner pass and a hard multi-criteria fail. A Git repository with a meaningful commit history and a README that would hold up in any technical interview.
+
+-----------------------------
+
+Enterprise abstraction creates fluency debt. I knew what a repo was but the mechanics had drifted. A week of building from scratch recovers that.
