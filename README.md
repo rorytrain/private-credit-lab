@@ -23,6 +23,12 @@ Each day is self-contained with its own scripts, sample documents and lab notes.
 - Model: claude-sonnet-4-6
 - Libraries: python-dotenv, csv, json
 
+## Setup
+
+Clone the repository and create a `.env` file in each day folder you intend to run: ANTHROPIC_API_KEY=your-key-here
+
+API keys are excluded from this repository by `.gitignore`. You will need an Anthropic API account with sufficient credits. The lab was built and tested using the pay-as-you-go API tier — total cost for all seven days is under USD 5.
+
 ## Design principles
 
 Prompts are structured to be declarative and mandate-specific, producing consistent and auditable outputs suitable for a regulated workflow context. Temperature is set to zero throughout to maximise predictability. Each script is self-contained and requires only a valid ANTHROPIC_API_KEY in a local .env file.
