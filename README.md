@@ -2,7 +2,7 @@
 
 A seven-day hands-on lab built in Python using the Anthropic API (claude-sonnet-4-6).
 
-The lab simulates four core workflows from a private credit alternatives platform: deal triage, document ingestion, covenant compliance monitoring and LP portfolio reporting. It was built as a concrete technical artefact to accompany an executive job search targeting embedded AI product and platform roles in financial services.
+The lab simulates four core workflows from a private credit alternatives platform: deal triage, document ingestion, covenant compliance monitoring and LP portfolio reporting. It was built to demonstrate applied AI prototyping capability in a private credit workflow context.
 
 ## Structure
 
