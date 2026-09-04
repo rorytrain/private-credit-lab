@@ -16,12 +16,23 @@ Each day is self-contained with its own scripts, sample documents and lab notes.
 - **Day 06** - Stress testing: edge cases, error handling and failure mode analysis
 - **Day 07** - Synthesis: interview narrative and production gap assessment
 
+## Architecture & Data Flow
+
+```
+Input Docs (CIMs / Credit Agreements / Financials)
+└──> Declarative Prompt Engineering (Zero-Temperature)
+     └──> Structured Extraction (JSON Outputs)
+          └──> Rule Engine & Audit Logs (CSV / Verification)
+               └──> LP Portfolio Summary Generation
+```
+
 ## Stack
 
 - Python 3.14
 - Anthropic SDK 0.111.0
 - Model: claude-sonnet-4-6
 - Libraries: python-dotenv, csv, json
+
 
 ## Setup
 
