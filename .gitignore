@@ -1,0 +1,17 @@
+﻿# Environment files — never commit API keys
+.env
+**/.env
+
+# Python virtual environment
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# VS Code settings
+.vscode/
+
+# OS files
+Thumbs.db
