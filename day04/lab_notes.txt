@@ -1,0 +1,9 @@
+Day 4. Built a covenant compliance monitoring script that simulates the monthly borrower review workflow. The script takes a borrower financial update as a text file, uses Claude to extract key metrics into structured JSON, then runs a Python validation layer that checks each metric against defined covenant thresholds. Two borrower updates were tested against the same credit agreement covenants.
+
+The clean update (Q2 2026) passed all covenants with one warning — leverage at 3.97x was within 10% of the 4.25x threshold, triggering a monitor closely flag without a breach. The breach update (Q3 2026) fired on all four covenants simultaneously: leverage, liquidity, interest coverage and capex all exceeded their limits.
+
+The most analytically interesting output was the borrower compliance statement. Claude correctly distinguished between the Q2 borrower explicitly confirming compliance with no Events of Default and the Q3 borrower acknowledging covenant pressure and promising recovery without confirming compliance. That distinction (a hedged narrative versus a clean confirmation) is a meaningful credit signal that the script surfaced from unstructured prose without being explicitly instructed to look for it.
+
+The model surfaced it because the prompt framed it as a credit analyst task rather than a data extraction task. That framing carries implicit domain knowledge — a credit analyst reading a borrower update is trained to notice what is not said as much as what is. The instruction to summarise the borrower's compliance statement in one sentence forced the model to make that interpretive judgment rather than just copying the text.
+
+The framing of the role in the system prompt shapes the analytical lens the model applies. "Extract these fields" produces different output than "you are a credit monitoring analyst." Same document, different cognition.
