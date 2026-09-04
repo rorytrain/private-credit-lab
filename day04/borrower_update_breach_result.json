@@ -1,0 +1,48 @@
+{
+  "metrics": {
+    "borrower": "Project Apex Holdings Limited",
+    "reporting_period": "Q3 2026 (Nine Months Ending September 30, 2026)",
+    "revenue_ltm_m": 54.8,
+    "adjusted_ebitda_ltm_m": 13.1,
+    "unadjusted_ebitda_ltm_m": 10.7,
+    "addbacks_m": 2.4,
+    "cash_m": 1.8,
+    "total_debt_m": 61.5,
+    "net_debt_m": 59.7,
+    "leverage_x": 4.56,
+    "interest_coverage_x": 2.8,
+    "capex_ytd_m": 5.6,
+    "borrower_compliance_statement": "The Borrower acknowledges covenant headroom pressure following a Q3 2026 enterprise customer churn event and is proactively engaging with its lender while expecting recovery in Q4 driven by a new contract pipeline."
+  },
+  "breaches": [
+    {
+      "covenant": "Maximum Leverage",
+      "threshold": "4.25x",
+      "actual": "4.56x",
+      "breach": true,
+      "note": "Leverage of 4.56x exceeds the 4.25x covenant threshold."
+    },
+    {
+      "covenant": "Minimum Liquidity",
+      "threshold": "$3.0m",
+      "actual": "$1.8m",
+      "breach": true,
+      "note": "Cash of $1.8m is below the $3.0m minimum liquidity covenant."
+    },
+    {
+      "covenant": "Minimum Interest Coverage",
+      "threshold": "3.0x",
+      "actual": "2.8x",
+      "breach": true,
+      "note": "Interest coverage of 2.8x is below the 3.0x minimum threshold."
+    },
+    {
+      "covenant": "Maximum Capex",
+      "threshold": "$4.0m",
+      "actual": "$5.6m",
+      "breach": true,
+      "note": "YTD capex of $5.6m exceeds the $4.0m annual limit."
+    }
+  ],
+  "warnings": []
+}

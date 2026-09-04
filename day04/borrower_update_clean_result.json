@@ -1,0 +1,27 @@
+{
+  "metrics": {
+    "borrower": "Project Apex Holdings Limited",
+    "reporting_period": "Q2 2026 (Six Months Ending June 30, 2026)",
+    "revenue_ltm_m": 57.4,
+    "adjusted_ebitda_ltm_m": 15.9,
+    "unadjusted_ebitda_ltm_m": 15.0,
+    "addbacks_m": 0.9,
+    "cash_m": 4.2,
+    "total_debt_m": 63.1,
+    "net_debt_m": 58.9,
+    "leverage_x": 3.97,
+    "interest_coverage_x": 4.1,
+    "capex_ytd_m": 1.8,
+    "borrower_compliance_statement": "The Borrower confirms full compliance with all financial covenants as at June 30, 2026, with no Events of Default having occurred or continuing as at the reporting date."
+  },
+  "breaches": [],
+  "warnings": [
+    {
+      "covenant": "Maximum Leverage",
+      "threshold": "4.25x",
+      "actual": "3.97x",
+      "breach": false,
+      "note": "Leverage of 3.97x is within 10pct of the 4.25x covenant threshold. Monitor closely."
+    }
+  ]
+}
