@@ -1,0 +1,53 @@
+PORTFOLIO DATA PACK — Q3 2026
+Prepared for: LP Quarterly Update
+Platform: Silverstone Credit Partners LP
+
+DEAL 1 — PROJECT APEX (ACTIVE)
+Status: Performing
+Facility: $65.0m Unitranche Term Loan
+Sponsor: Silverlake Capital
+Sector: Enterprise Software (Cloud ERP)
+Vintage: Q3 2026
+
+Latest Financial Update (Q3 2026):
+- Adjusted EBITDA (LTM): $13.1m (vs $15.9m at close)
+- Net Leverage: 4.56x (covenant: 4.25x) — BREACH
+- Minimum Liquidity: $1.8m (covenant: $3.0m) — BREACH
+- Interest Coverage: 2.8x (covenant: 3.0x) — BREACH
+- Capex YTD: $5.6m (covenant: $4.0m) — BREACH
+- Add-backs: $2.4m (18.3% of adjusted EBITDA)
+
+Covenant Status: Four simultaneous breaches as at Q3 2026.
+Borrower has proactively engaged lender. Recovery expected Q4
+driven by new contract pipeline following enterprise churn event.
+
+Triage Score at Origination: 6/10
+Key Origination Flags: Dividend recapitalisation ($15m),
+add-back scrutiny, leverage close to ceiling.
+
+DEAL 2 — PROJECT HARRIER (PIPELINE)
+Status: Under Review
+Facility: $58.0m Unitranche Term Loan
+Sponsor: Bridgepoint
+Sector: Enterprise Software (SaaS)
+Vintage: Pipeline — Q4 2026 target
+
+Covenant Comparison vs Internal Standard:
+- Six HIGH severity deviations identified
+- Leverage initial: 5.25x vs 4.5x standard
+- Equity cure: permitted (prohibited by standard)
+- Reporting delays: 45/60/150 days vs 30/45/120 standard
+- Restricted payments threshold: 4.5x vs 3.5x standard
+
+Status: Escalated to senior credit committee.
+Renegotiation of key terms required before execution.
+
+DEAL 3 — PROJECT MERIDIAN (DECLINED)
+Status: Declined at Triage
+Facility: $106.7m Senior Secured Term Loan B
+Sponsor: Bridgepoint
+Sector: Petrol Station and Convenience Retail
+Triage Score: 1/10
+Decline Reason: Dual sector exclusion (energy and retail),
+leverage breach at 5.8x vs 5.0x ceiling,
+aggressive add-backs at 28.7% of adjusted EBITDA.

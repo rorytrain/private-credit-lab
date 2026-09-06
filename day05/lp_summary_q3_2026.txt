@@ -1,0 +1,38 @@
+LP QUARTERLY UPDATE
+Silverstone Credit Partners LP
+Period: Q3 2026
+Generated: 2026-09-06 15:58
+============================================================
+
+SILVERSTONE CREDIT PARTNERS LP
+LP QUARTERLY UPDATE — Q3 2026
+
+---
+
+PORTFOLIO OVERVIEW
+
+The portfolio comprises one active position and one deal under active credit committee review, with a third declined at triage. Deployed capital stands at $65.0m across a single unitranche facility. The active position is under stress, and that situation is addressed directly below. Pipeline activity is measured; mandate discipline has been maintained.
+
+---
+
+ACTIVE POSITIONS
+
+Project Apex ($65.0m unitranche, Enterprise Software, Silverlake Capital) is in simultaneous breach of four financial covenants as at Q3 2026. Net leverage has deteriorated to 4.56x against a 4.25x covenant, interest coverage has fallen to 2.8x against a 3.0x floor, minimum liquidity is $1.8m against a $3.0m requirement, and capex has exceeded its annual ceiling by $1.6m. Adjusted EBITDA has declined from $15.9m at close to $13.1m LTM, a deterioration of approximately 18%, with add-backs now representing 18.3% of that figure. The borrower has engaged proactively and attributes the shortfall to an enterprise churn event, with recovery anticipated in Q4 on the basis of a new contract pipeline. We are monitoring that pipeline closely and have not yet placed reliance on it. It is worth noting that origination triage flagged leverage proximity to covenant ceiling, a $15m dividend recapitalisation, and add-back quality as concerns at the time of underwriting. Those flags have proven material.
+
+---
+
+PIPELINE
+
+Project Harrier ($58.0m unitranche, SaaS, Bridgepoint) has been escalated to senior credit committee following identification of six high-severity covenant deviations from internal standards, including opening leverage of 5.25x against our 4.5x benchmark, permitted equity cure rights, and materially extended reporting timelines. The deal will not proceed on current terms. Renegotiation is underway and execution remains conditional on satisfactory resolution of those deviations.
+
+---
+
+DECLINED DEALS
+
+Project Meridian ($106.7m senior secured, petrol station and convenience retail, Bridgepoint) was declined at triage with a score of 1/10, on grounds of dual sector exclusion, leverage in excess of the 5.0x ceiling, and add-backs representing 28.7% of adjusted EBITDA — mandate discipline was applied without exception.
+
+---
+
+RISK COMMENTARY
+
+The principal risk in the portfolio at this time is concentration: the entire deployed book sits in a single enterprise software credit that is currently in four-covenant breach. The borrower's recovery thesis is dependent on new contract execution that has not yet been evidenced, and we are treating that thesis with appropriate scepticism. We have engaged external counsel to review our enforcement position and are in active dialogue with the sponsor regarding remediation options, including potential covenant reset discussions.
