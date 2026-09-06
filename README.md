@@ -38,7 +38,7 @@ Input Docs (CIMs / Credit Agreements / Financials)
 
 Clone the repository and create a `.env` file in each day folder you intend to run: ANTHROPIC_API_KEY=your-key-here
 
-API keys are excluded from this repository by `.gitignore`. You will need an Anthropic API account with sufficient credits. The lab was built and tested using the pay-as-you-go API tier — total cost for all seven days is under USD 5.
+API keys are excluded from this repository by `.gitignore`. You will need an Anthropic API account with sufficient credits. The lab was built and tested using the pay-as-you-go API tier (total cost for all seven days is under USD 5).
 
 ## Design principles
 
