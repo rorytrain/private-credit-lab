@@ -18,13 +18,19 @@ The most telling output from the three-CIM validation run was the add-backs flag
 
 ------------
 
-What is actually happening when you run python triage.py sample_cim.txt
-Here is the full sequence, step by step.
+What is actually happening when you run python triage.py sample_cim.txt? Here is the full sequence, step by step:
+
 Step 1 — Python reads the file. The load_cim() function opens sample_cim.txt and reads it into a Python string variable called cim_text. At this point nothing has touched the API. You have a block of plain text sitting in memory.
+
 Step 2 — Python constructs a prompt. The triage_cim() function takes that text and assembles it into a longer string (the prompt) by combining three things: the role instruction ("you are a private credit analyst"), the mandate parameters (EBITDA range, leverage ceiling, excluded sectors), and the CIM text itself appended at the bottom. The JSON structure you want back is also specified in that prompt. The model has no idea what a CIM is beyond what you tell it in that string.
+
 Step 3 — Python sends the prompt to the API. The client.messages.create() call packages that prompt string into an HTTP POST request and sends it to https://api.anthropic.com/v1/messages. Your API key travels in the request header. The entire prompt (mandate parameters, instructions and CIM text) is transmitted as the content field of the messages array. There is no persistent memory on the API side. Every call is stateless. Sonnet 4.6 has never seen this document before and will not remember it after.
+
 Step 4 — Sonnet processes it. The model reads the full prompt as a single block of context. It does not execute rules or run a database query. It generates a response token by token, constrained by the instructions you gave it. The JSON structure you specified in the prompt is what shapes the output format: the model is pattern-matching against your instructions, not filling a template.
+
 Step 5 — Python receives and parses the response. The API returns the raw JSON envelope you saw in the curl test. The SDK extracts content[0].text, which is the model's response as a string. Your script then strips any markdown formatting and runs json.loads() to convert that string into a Python dictionary. That is the object that gets printed.
+
+------------
 
 The key architectural point. The model is not a database and it is not running logic. It is a text-in, text-out system. Everything it knows about your mandate, your document and your required output format exists only within that single prompt string. If you changed the mandate parameters at the top of triage.py, the next run would score the same CIM differently — because the model's only reference point is what you put in the prompt.
 
