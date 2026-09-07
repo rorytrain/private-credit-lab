@@ -266,6 +266,7 @@ Set covenants_found to false if no covenant terms are present.
 Use null for any covenant not specified.
 extraction_confidence must be one of: HIGH, MEDIUM, LOW, NONE.
 data_quality_issues: list any missing, redacted or externally referenced terms.
+Be concise. Return only the JSON object with no preamble, explanation or trailing text.
 
 CREDIT AGREEMENT:
 """ + text
