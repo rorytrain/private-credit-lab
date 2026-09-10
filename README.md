@@ -1,6 +1,6 @@
 ﻿# Private Credit Workflow Lab
 
-A hands-on lab built in Python across eight phases using the Anthropic API (claude-sonnet-4-6).
+A hands-on lab built in Python across eight phases using the Anthropic, OpenAI and Google APIs.
 
 The lab simulates four core workflows from a private credit alternatives platform: deal triage, document ingestion, covenant compliance monitoring and LP portfolio reporting. It was built to demonstrate applied AI prototyping capability in a private credit workflow context.
 
