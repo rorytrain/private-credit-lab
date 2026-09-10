@@ -9,13 +9,44 @@
       "leverage_x": 4.4,
       "flag_count": 2,
       "flags": [
-        "Dividend recapitalization of $15m represents 25% of facility size; monitor cash flow impact post-close.",
+        "Dividend recapitalization of $15m represents 101% of adjusted EBITDA, increasing financial risk and leverage trajectory.",
         "Management add-backs of $1.2m (8% of adjusted EBITDA) should be validated for sustainability and recurring nature."
       ],
-      "rationale": "Strong fit across all criteria: EBITDA of $14.8m within $10-75m range, leverage of 4.4x below 5.0x maximum, preferred unitranche structure, sponsor-backed (Silverlake Capital), and non-excluded software sector with attractive 98% gross retention and 78% margins.",
+      "rationale": "Strong fit across all criteria: EBITDA of $14.8m within $10-75m range, leverage of 4.4x below 5.0x maximum, preferred unitranche structure, sponsor-backed (Silverlake Capital), and non-excluded sector (software/ERP). High-quality SaaS business with 98% gross retention and strong margins.",
       "input_tokens": 548,
-      "output_tokens": 267,
-      "elapsed_seconds": 3.0
+      "output_tokens": 278,
+      "elapsed_seconds": 3.04
+    },
+    {
+      "model": "GPT-4.1 mini",
+      "mandate_fit_score": 9,
+      "company_name": "Project Apex",
+      "sector": "Software / Technology",
+      "adjusted_ebitda_m": 14.8,
+      "leverage_x": 4.4,
+      "flag_count": 0,
+      "flags": [],
+      "rationale": "EBITDA and leverage are within mandate ranges, sector is allowed, structure is preferred, and sponsor-backed.",
+      "input_tokens": 464,
+      "output_tokens": 123,
+      "elapsed_seconds": 2.35
+    },
+    {
+      "model": "Gemini 3.6 Flash",
+      "mandate_fit_score": 9,
+      "company_name": "Project Apex",
+      "sector": "ERP Software / Technology",
+      "adjusted_ebitda_m": 14.8,
+      "leverage_x": 4.4,
+      "flag_count": 2,
+      "flags": [
+        "Use of proceeds includes a $15.0 million dividend recapitalisation to the sponsor.",
+        "Adjusted EBITDA relies on $1.2 million in management add-backs; unadjusted leverage rises to 4.78x."
+      ],
+      "rationale": "The transaction satisfies all core mandate criteria: EBITDA ($14.8m) falls within the $10m-$75m target, leverage (4.4x) is below the 5.0x cap, structure is a preferred unitranche, sector is eligible, and the deal is sponsor-backed.",
+      "input_tokens": 500,
+      "output_tokens": 243,
+      "elapsed_seconds": 8.41
     },
     {
       "model": "Claude Sonnet 4.6",
@@ -26,67 +57,84 @@
       "leverage_x": 4.4,
       "flag_count": 4,
       "flags": [
-        "Add-back risk: Adjusted EBITDA includes $1.2m in management add-backs (~8% of total), which inflates the headline figure; underwriting on unadjusted EBITDA of $13.6m would push implied leverage to ~4.8x, close to the 5.0x ceiling.",
-        "Dividend recapitalisation: $15.0m of the $65.0m facility funds a dividend recap, increasing lender risk without adding operational value to the business.",
-        "Leverage sensitivity: At indicative closing leverage of 4.5x, there is limited headroom to the 5.0x maximum; any EBITDA underperformance at close could breach mandate thresholds.",
-        "EBITDA is at the lower end of the mandate range ($14.8m vs. $10m floor), leaving limited cushion if earnings deteriorate post-close."
+        "Add-back quality risk: Management add-backs represent ~8% of adjusted EBITDA ($1.2m on $14.8m); underwriting on unadjusted EBITDA of $13.6m would push leverage to approximately 4.8x, close to the 5.0x ceiling.",
+        "Dividend recapitalisation: $15m of the $65m facility funds a dividend recap rather than value-creating investment, increasing borrower risk and signalling early sponsor liquidity extraction post-2023 acquisition.",
+        "Leverage headroom is thin: At 4.4x-4.8x depending on EBITDA basis used, there is limited cushion to the 5.0x maximum if EBITDA underperforms or further adjustments are challenged.",
+        "Closing leverage tolerance flagged at 4.5x by sponsor, suggesting potential for EBITDA to be lower at close than LTM figures, warranting scrutiny of forward run-rate assumptions."
       ],
-      "rationale": "Deal fits well across most mandate criteria: sponsor-backed (Silverlake Capital), preferred unitranche structure, non-excluded sector, EBITDA within range ($14.8m), and leverage of 4.4x inside the 5.0x cap. Minor concerns around add-back quality and dividend recap use of proceeds temper the score.",
+      "rationale": "Project Apex is a sponsor-backed deal with Silverlake Capital and is structured as a unitranche term loan, both of which align well with mandate preferences. Adjusted EBITDA of $14.8m sits within the $10m-$75m target range, and implied leverage of 4.4x is within the 5.0x maximum. The sector is enterprise software, which is not excluded. Minor concerns exist around the quality of EBITDA given $1.2m in management add-backs on a relatively small EBITDA base (~8% of adjusted figure), and the $15m dividend recapitalisation component increases effective risk without growing enterprise value.",
       "input_tokens": 548,
-      "output_tokens": 421,
-      "elapsed_seconds": 8.29
+      "output_tokens": 512,
+      "elapsed_seconds": 10.28
+    },
+    {
+      "model": "GPT-4.1",
+      "mandate_fit_score": 10,
+      "company_name": "Project Apex",
+      "sector": "Software / Technology",
+      "adjusted_ebitda_m": 14.8,
+      "leverage_x": 4.4,
+      "flag_count": 2,
+      "flags": [
+        "EBITDA includes $1.2m in management add-backs.",
+        "Dividend recapitalization component may warrant additional diligence."
+      ],
+      "rationale": "All mandate criteria are met: EBITDA within range, leverage below maximum, sector is eligible, sponsor-backed, and preferred structure.",
+      "input_tokens": 464,
+      "output_tokens": 152,
+      "elapsed_seconds": 1.94
     },
     {
       "model": "Claude Opus 4.8",
       "mandate_fit_score": 8,
       "company_name": "Project Apex",
-      "sector": "Enterprise Software (ERP) / Technology",
+      "sector": "Enterprise Software (ERP)",
       "adjusted_ebitda_m": 14.8,
       "leverage_x": 4.4,
       "flag_count": 3,
       "flags": [
-        "$15.0m of the $65.0m facility funds a dividend recapitalisation rather than growth or operations, adding no enterprise value and increasing lender risk.",
-        "Adjusted EBITDA includes $1.2m of management add-backs; on unadjusted EBITDA of $13.6m, leverage rises to approximately 4.8x, close to the 5.0x cap.",
-        "Reported 4.4x leverage sits just below the mandate maximum, leaving limited headroom for underperformance."
+        "Portion of proceeds funds a $15.0m dividend recapitalisation rather than growth or acquisition, increasing risk profile.",
+        "Adjusted EBITDA includes $1.2m of management add-backs; leverage on unadjusted EBITDA of $13.6m is approximately 4.8x.",
+        "Reported 4.4x leverage sits close to the 5.0x cap, leaving limited cushion for further adjustments."
       ],
-      "rationale": "Sponsor-backed software deal within EBITDA range, under 5.0x leverage, and a preferred unitranche structure in a non-excluded sector. Fit is strong but tempered by add-back reliance and a dividend recap use of proceeds.",
+      "rationale": "Sponsor-backed software deal within EBITDA range, under 5.0x leverage, and preferred unitranche structure; not in an excluded sector. Dividend recap use of proceeds and add-back reliance warrant scrutiny.",
       "input_tokens": 775,
-      "output_tokens": 417,
-      "elapsed_seconds": 5.89
+      "output_tokens": 389,
+      "elapsed_seconds": 5.5
     },
     {
-      "model": "GPT-4o",
+      "model": "OpenAI o3",
       "mandate_fit_score": 9,
       "company_name": "Project Apex",
-      "sector": "software",
+      "sector": "Software / Technology",
       "adjusted_ebitda_m": 14.8,
       "leverage_x": 4.4,
       "flag_count": 2,
       "flags": [
-        "The transaction includes a $15.0 million dividend recapitalisation.",
-        "Adjusted EBITDA includes $1.2 million in management add-backs."
+        "EBITDA includes $1.2m management add-backs.",
+        "Proceeds fund a $15m dividend recap."
       ],
-      "rationale": "The deal fits well within the EBITDA range, leverage limit, and preferred structure. It is sponsor-backed and not in an excluded sector.",
-      "input_tokens": 464,
-      "output_tokens": 162,
-      "elapsed_seconds": 4.98
+      "rationale": "EBITDA and leverage within parameters, sponsor-backed, software sector not excluded, unitranche structure preferred; minor concerns on add-backs and dividend recap.",
+      "input_tokens": 463,
+      "output_tokens": 499,
+      "elapsed_seconds": 10.77
     },
     {
       "model": "Gemini 3.1 Pro",
       "mandate_fit_score": 9,
       "company_name": "Project Apex",
-      "sector": "Enterprise Software",
+      "sector": "Cloud-based ERP Software",
       "adjusted_ebitda_m": 14.8,
       "leverage_x": 4.4,
       "flag_count": 2,
       "flags": [
-        "Proceeds are partially being used for a $15.0 million dividend recapitalization, adding leverage without enterprise value creation.",
-        "Adjusted EBITDA includes $1.2 million in management add-backs which will require verification during diligence."
+        "Proceeds will partially fund a $15.0 million dividend recapitalization.",
+        "Adjusted EBITDA relies on $1.2 million in management add-backs which will require validation during diligence."
       ],
-      "rationale": "The transaction hits all mandate criteria perfectly: EBITDA ($14.8m) and leverage (4.4x) are within limits, the sector is not excluded, it utilizes a preferred unitranche structure, and is sponsor-backed.",
+      "rationale": "The transaction aligns with all mandate criteria, meeting the required EBITDA and leverage thresholds, utilizing a preferred structure, avoiding excluded sectors, and featuring sponsor backing.",
       "input_tokens": 500,
-      "output_tokens": 223,
-      "elapsed_seconds": 11.29
+      "output_tokens": 199,
+      "elapsed_seconds": 36.98
     }
   ],
   "sample_cim_2.txt": [
@@ -105,7 +153,38 @@
       "rationale": "Strong fit across all key criteria: EBITDA of $14.8m within $10-75m range; leverage of 3.38x well below 5.0x maximum; preferred unitranche structure; sponsor-backed (Silverlake Capital); non-excluded sector with high-quality SaaS characteristics (98% retention, 78% gross margin).",
       "input_tokens": 510,
       "output_tokens": 280,
-      "elapsed_seconds": 3.4
+      "elapsed_seconds": 3.46
+    },
+    {
+      "model": "GPT-4.1 mini",
+      "mandate_fit_score": 9,
+      "company_name": "Project Apex",
+      "sector": "software",
+      "adjusted_ebitda_m": 14.8,
+      "leverage_x": 3.38,
+      "flag_count": 0,
+      "flags": [],
+      "rationale": "EBITDA and leverage are within mandate range. Sector is software, which is allowed. Structure is preferred unitranche term loan. Sponsor-backed deal.",
+      "input_tokens": 434,
+      "output_tokens": 130,
+      "elapsed_seconds": 2.06
+    },
+    {
+      "model": "Gemini 3.6 Flash",
+      "mandate_fit_score": 9,
+      "company_name": "Project Apex",
+      "sector": "Enterprise Software",
+      "adjusted_ebitda_m": 14.8,
+      "leverage_x": 3.38,
+      "flag_count": 2,
+      "flags": [
+        "Adjusted EBITDA includes $1.2m (8.1%) in management add-backs that require detailed Quality of Earnings validation.",
+        "$5.0m of the facility proceeds will fund growth investments in R&D and international expansion rather than pure debt refinancing."
+      ],
+      "rationale": "Project Apex aligns with all mandate criteria: EBITDA ($14.8m) is within the $10m-$75m target range, leverage of 3.38x is comfortably below the 5.0x ceiling, software is an allowed sector, structure is a preferred unitranche, and it is backed by Silverlake Capital.",
+      "input_tokens": 479,
+      "output_tokens": 252,
+      "elapsed_seconds": 10.3
     },
     {
       "model": "Claude Sonnet 4.6",
@@ -116,47 +195,63 @@
       "leverage_x": 4.5,
       "flag_count": 4,
       "flags": [
-        "Add-back risk: $1.2m in management add-backs represents ~8% of Adjusted EBITDA ($14.8m); underlying clean EBITDA is $13.6m, which should be validated to confirm the deal remains within mandate floor.",
-        "Leverage confirmation required: indicative leverage is stated as 4.5x 'closing EBITDA' \u2014 if closing EBITDA is measured on a forward or pro-forma basis, actual drawn leverage at close should be stress-tested against the $50m facility.",
-        "Proceeds include $5m for R&D and international expansion, introducing execution risk; lender should assess whether these growth initiatives are reflected in any forward EBITDA projections used to size the facility.",
-        "SaaS revenue quality is strong (98% gross retention), but mid-market manufacturing customer concentration should be assessed given sector cyclicality and potential impact on recurring revenue durability."
+        "Add-back risk: $1.2m in management add-backs represent ~8% of Adjusted EBITDA ($14.8m); true underlying EBITDA is $13.6m, which could tighten leverage headroom if add-backs are not fully supportable.",
+        "Leverage sensitivity: At $50m facility on $13.6m clean EBITDA (ex add-backs), leverage rises to approximately 3.7x-4.5x depending on add-back acceptance; confirm closing EBITDA definition with sponsor.",
+        "Facility sizing vs. use of proceeds: $5.0m of the $50.0m facility is earmarked for R&D and international expansion, introducing a growth/capex component that may require covenant structuring to protect lender position.",
+        "Sponsor verification: Silverlake Capital should be confirmed as a recognized financial sponsor; note similarity in name to Silver Lake (the large-cap tech PE firm) \u2014 confirm entity identity to avoid mandate misclassification."
       ],
-      "rationale": "Deal fits squarely within mandate on most key criteria: EBITDA of $14.8m is within the $10m-$75m range, leverage of 4.5x is below the 5.0x maximum, structure is unitranche (preferred), and the deal is sponsor-backed by Silverlake Capital. Sector is enterprise software, which is not excluded. Minor concern around the $1.2m in management add-backs representing ~8% of reported EBITDA, warranting diligence scrutiny on add-back quality. Overall a strong mandate fit.",
+      "rationale": "Project Apex fits well within mandate parameters: EBITDA of $14.8m sits within the $10m-$75m range, indicative leverage of 4.5x is below the 5.0x ceiling, and the unitranche structure is explicitly preferred. The deal is sponsor-backed by Silverlake Capital and operates in enterprise software, a non-excluded sector with strong recurring revenue characteristics. Minor caution warranted on the $1.2m in management add-backs representing ~8% of reported EBITDA, which warrants diligence scrutiny.",
       "input_tokens": 510,
-      "output_tokens": 474,
-      "elapsed_seconds": 14.02
+      "output_tokens": 494,
+      "elapsed_seconds": 13.77
+    },
+    {
+      "model": "GPT-4.1",
+      "mandate_fit_score": 10,
+      "company_name": "Project Apex",
+      "sector": "Software / Technology",
+      "adjusted_ebitda_m": 14.8,
+      "leverage_x": 4.5,
+      "flag_count": 0,
+      "flags": [],
+      "rationale": "All mandate criteria are met: EBITDA within range, leverage below maximum, sector is eligible, sponsor-backed, and preferred structure.",
+      "input_tokens": 434,
+      "output_tokens": 126,
+      "elapsed_seconds": 1.91
     },
     {
       "model": "Claude Opus 4.8",
       "mandate_fit_score": 9,
       "company_name": "Project Apex",
-      "sector": "Enterprise Software (ERP) for mid-market manufacturing",
+      "sector": "Enterprise Software (ERP)",
       "adjusted_ebitda_m": 14.8,
-      "leverage_x": 4.5,
-      "flag_count": 3,
+      "leverage_x": 3.38,
+      "flag_count": 2,
       "flags": [
-        "Adjusted EBITDA includes $1.2m of management add-backs; underlying EBITDA of ~$13.6m still clears the mandate minimum, but add-backs should be diligenced.",
-        "Stated 4.5x leverage is on closing EBITDA; the $50m facility on $14.8m LTM EBITDA implies ~3.4x, so leverage basis and pro forma EBITDA assumptions warrant clarification.",
-        "This is a teaser (Version B); full financials and quality-of-earnings review are required to confirm figures."
+        "Reported leverage tolerance is 4.5x on closing EBITDA, but stated $50m facility implies ~3.4x on LTM EBITDA of $14.8m; clarify closing EBITDA basis.",
+        "Adjusted EBITDA includes $1.2m of management add-backs which warrant diligence."
       ],
-      "rationale": "Strong fit across all criteria: sponsor-backed software deal with EBITDA in range, leverage below the 5.0x cap, and a preferred unitranche structure in a non-excluded sector.",
+      "rationale": "Sponsor-backed software deal with EBITDA in range, preferred unitranche structure, and leverage well below the 5.0x cap. Sector is not excluded.",
       "input_tokens": 716,
-      "output_tokens": 422,
-      "elapsed_seconds": 5.6
+      "output_tokens": 319,
+      "elapsed_seconds": 4.43
     },
     {
-      "model": "GPT-4o",
-      "mandate_fit_score": 10,
+      "model": "OpenAI o3",
+      "mandate_fit_score": 9,
       "company_name": "Project Apex",
-      "sector": "Software",
+      "sector": "Cloud-based ERP software",
       "adjusted_ebitda_m": 14.8,
       "leverage_x": 4.5,
-      "flag_count": 0,
-      "flags": [],
-      "rationale": "The deal fits all mandate criteria including EBITDA range, leverage, sector, structure, and sponsor backing.",
-      "input_tokens": 434,
-      "output_tokens": 123,
-      "elapsed_seconds": 3.78
+      "flag_count": 2,
+      "flags": [
+        "$1.2m EBITDA add-backs inflate earnings.",
+        "Concentration in mid-market manufacturing niche."
+      ],
+      "rationale": "EBITDA, leverage, sector, structure, and sponsor criteria all align; minor adjustments in EBITDA add-backs slightly reduce perfect fit.",
+      "input_tokens": 433,
+      "output_tokens": 426,
+      "elapsed_seconds": 7.86
     },
     {
       "model": "Gemini 3.1 Pro",
@@ -167,13 +262,13 @@
       "leverage_x": 3.38,
       "flag_count": 2,
       "flags": [
-        "Adjusted EBITDA includes $1.2m of management add-backs that will require due diligence.",
-        "While transaction leverage is ~3.38x, the sponsor's indicative leverage tolerance is 4.5x, suggesting they may seek flexibility for future debt incurrence."
+        "Adjusted EBITDA includes $1.2m in management add-backs which will require diligence.",
+        "Proceeds include a $5.0m strategic investment in R&D and international expansion, introducing potential execution risk."
       ],
-      "rationale": "The opportunity perfectly aligns with the mandate: it is sponsor-backed, structured as a preferred unitranche, operates in a non-excluded sector, generates EBITDA within the $10m-$75m target, and has a transaction leverage (~3.38x) well below the 5.0x limit.",
+      "rationale": "The transaction perfectly aligns with the mandate, featuring a sponsor-backed software company with $14.8m LTM EBITDA and a preferred unitranche structure. The opening leverage of 3.38x is well below the 5.0x maximum limit and the sector is not excluded.",
       "input_tokens": 479,
-      "output_tokens": 251,
-      "elapsed_seconds": 18.08
+      "output_tokens": 233,
+      "elapsed_seconds": 16.62
     }
   ],
   "sample_cim_3.txt": [
@@ -193,82 +288,135 @@
       "rationale": "Deal fails on multiple critical criteria: (1) Leverage of 5.8x exceeds 5.0x maximum; (2) Business operates in excluded sectors (retail and energy/fuel); (3) Pro forma leverage expected to reach 6.0x at close, further violating leverage covenant.",
       "input_tokens": 553,
       "output_tokens": 280,
-      "elapsed_seconds": 3.55
+      "elapsed_seconds": 3.63
+    },
+    {
+      "model": "GPT-4.1 mini",
+      "mandate_fit_score": 3,
+      "company_name": "Project Meridian",
+      "sector": "retail",
+      "adjusted_ebitda_m": 18.4,
+      "leverage_x": 5.8,
+      "flag_count": 2,
+      "flags": [
+        "Sector is retail, which is excluded from the mandate.",
+        "Leverage of 5.8x exceeds the maximum allowed 5.0x."
+      ],
+      "rationale": "EBITDA is within range and structure is preferred, but leverage exceeds maximum and sector is excluded.",
+      "input_tokens": 470,
+      "output_tokens": 159,
+      "elapsed_seconds": 2.91
+    },
+    {
+      "model": "Gemini 3.6 Flash",
+      "mandate_fit_score": 2,
+      "company_name": "Project Meridian",
+      "sector": "Convenience Retail / Energy (Petrol Stations)",
+      "adjusted_ebitda_m": 18.4,
+      "leverage_x": 5.8,
+      "flag_count": 3,
+      "flags": [
+        "Excluded Sector: Business operates in retail and fuel distribution, violating the mandate's sector exclusions.",
+        "Excessive Leverage: Leverage of 5.8x exceeds the mandate's 5.0x maximum ceiling.",
+        "High Management Add-backs: Add-backs total $4.1m, representing ~22% of reported Adjusted EBITDA."
+      ],
+      "rationale": "Deal fails on key mandate criteria: sector (retail, energy, oil, and gas are excluded) and maximum leverage (5.8x vs. 5.0x cap). EBITDA scale, sponsor presence, and senior secured structure align with requirements.",
+      "input_tokens": 507,
+      "output_tokens": 257,
+      "elapsed_seconds": 8.54
     },
     {
       "model": "Claude Sonnet 4.6",
-      "mandate_fit_score": 2,
+      "mandate_fit_score": 1,
       "company_name": "Project Meridian",
       "sector": "Petrol Station & Convenience Retail",
       "adjusted_ebitda_m": 18.4,
       "leverage_x": 5.8,
       "flag_count": 5,
       "flags": [
-        "SECTOR EXCLUSION \u2014 ENERGY: Business derives revenue from petrol station operations with long-term fuel supply agreements tied to oil majors; energy/oil/gas is an explicitly excluded sector under the mandate.",
-        "SECTOR EXCLUSION \u2014 RETAIL: Convenience retail network across 187 sites constitutes a retail business, which is also an explicitly excluded sector under the mandate.",
-        "LEVERAGE BREACH: Implied leverage of 5.8x on adjusted EBITDA exceeds the 5.0x mandate maximum; sponsor's indicated tolerance of 6.0x signals further upside leverage risk at close.",
-        "ADD-BACK QUALITY RISK: Management add-backs of $4.1m represent ~29% of adjusted EBITDA; on unadjusted EBITDA of $14.3m, leverage rises to approximately 7.5x, materially above mandate limits.",
-        "THIN GROSS MARGIN: Gross margin of 6% reflects the low-margin nature of fuel retail, indicating high revenue sensitivity to volume and fuel price movements with limited earnings cushion for debt service."
+        "SECTOR EXCLUSION: Business operates petrol stations and convenience retail \u2014 both energy/oil and retail are explicitly excluded sectors under the mandate.",
+        "LEVERAGE BREACH: Implied leverage of 5.8x exceeds the 5.0x maximum; sponsor's indicative tolerance of 6.0x widens the breach further.",
+        "ADD-BACK QUALITY: Management add-backs of $4.1m represent ~29% of adjusted EBITDA, creating material downside risk to underwritten EBITDA; unadjusted EBITDA of $14.3m implies leverage closer to 7.5x.",
+        "STRUCTURE MISMATCH: Facility is structured as a Term Loan B, which is outside the preferred structures of unitranche or senior secured term loan.",
+        "THIN MARGINS: Gross margin of 6% on $312m revenue signals a low-quality, commodity-driven earnings profile with limited downside protection."
       ],
-      "rationale": "Project Meridian fails on multiple mandate criteria. The sector is a dual exclusion \u2014 the business operates in both energy/fuel (petrol stations with oil major supply agreements) and retail (convenience retail network), both of which are explicitly excluded. Leverage of 5.8x on adjusted EBITDA breaches the 5.0x maximum, and the sponsor's indicated tolerance of 6.0x widens this further. The $4.1m in management add-backs (29% of adjusted EBITDA) is material and inflates EBITDA; on unadjusted EBITDA of $14.3m, leverage rises to approximately 7.5x. The only positive factors are that EBITDA falls within the $10m\u2013$75m range, the sponsor (Bridgepoint) is an established PE firm satisfying the sponsor-backed requirement, and the senior secured structure is preferred.",
+      "rationale": "Project Meridian fails on multiple hard mandate criteria. The sector is explicitly excluded on two counts: energy/petrol and retail. Leverage of 5.8x (rising to 6.0x indicative tolerance) materially exceeds the 5.0x maximum. The structure is a Term Loan B rather than a preferred unitranche or plain senior secured term loan. The only mandate-compliant elements are sponsor backing (Bridgepoint) and EBITDA within the $10m-$75m range, though the $4.1m in management add-backs (29% of adjusted EBITDA) raises quality-of-earnings concerns.",
       "input_tokens": 553,
-      "output_tokens": 587,
-      "elapsed_seconds": 18.87
+      "output_tokens": 499,
+      "elapsed_seconds": 12.22
+    },
+    {
+      "model": "GPT-4.1",
+      "mandate_fit_score": 2,
+      "company_name": "Project Meridian",
+      "sector": "petrol station and convenience retail",
+      "adjusted_ebitda_m": 18.4,
+      "leverage_x": 5.8,
+      "flag_count": 3,
+      "flags": [
+        "Sector includes both retail and energy/oil, which are excluded.",
+        "Leverage of 5.8x is above the 5.0x maximum.",
+        "Structure is acceptable but sector and leverage are disqualifying."
+      ],
+      "rationale": "The deal is sponsor-backed and EBITDA is within range, but the sector (retail, energy/oil/gas) is excluded and leverage exceeds mandate maximum.",
+      "input_tokens": 470,
+      "output_tokens": 187,
+      "elapsed_seconds": 2.37
     },
     {
       "model": "Claude Opus 4.8",
       "mandate_fit_score": 1,
       "company_name": "Project Meridian",
-      "sector": "Retail / Fuel (petrol stations & convenience retail)",
+      "sector": "Retail / Energy (petrol station and convenience retail)",
       "adjusted_ebitda_m": 18.4,
       "leverage_x": 5.8,
       "flag_count": 4,
       "flags": [
-        "Excluded sector: petrol stations and convenience retail combine both retail and oil/fuel exposure, breaching mandate exclusions.",
-        "Leverage of 5.8x exceeds the 5.0x maximum, and the sponsor's indicative tolerance of 6.0x is further out of policy.",
-        "Adjusted EBITDA includes $4.1m of management add-backs (unadjusted EBITDA is only $14.3m); on an unadjusted basis leverage rises to ~7.5x.",
-        "Very thin 6% gross margin indicates a low-margin, fuel-price-exposed business model."
+        "Excluded sector: petrol/fuel retail combines retail, oil and gas exposure, all of which are barred under the mandate.",
+        "Leverage of 5.8x exceeds the 5.0x maximum, and the sponsor is targeting 6.0x tolerance.",
+        "Adjusted EBITDA includes $4.1m of management add-backs; unadjusted EBITDA is only $14.3m, pushing leverage even higher on an unadjusted basis (~7.5x).",
+        "Very thin 6% gross margin signals a low-margin, commoditized fuel-driven business model."
       ],
-      "rationale": "Multiple hard mandate breaches: the business is in excluded sectors (retail and fuel/oil), and leverage of 5.8x exceeds the 5.0x maximum. Despite sponsor backing and an acceptable structure and EBITDA level, the sector and leverage exclusions make this a clear pass.",
+      "rationale": "Fails on multiple hard criteria: the business sits squarely in excluded sectors (retail and fuel/oil), leverage of 5.8x exceeds the 5.0x maximum, and add-backs inflate EBITDA. Sponsor-backing and senior secured structure are the only positives.",
       "input_tokens": 778,
-      "output_tokens": 489,
-      "elapsed_seconds": 5.76
+      "output_tokens": 469,
+      "elapsed_seconds": 6.45
     },
     {
-      "model": "GPT-4o",
-      "mandate_fit_score": 3,
+      "model": "OpenAI o3",
+      "mandate_fit_score": 2,
       "company_name": "Project Meridian",
-      "sector": "retail",
+      "sector": "Petrol station and convenience retail",
       "adjusted_ebitda_m": 18.4,
       "leverage_x": 5.8,
       "flag_count": 3,
       "flags": [
-        "Leverage exceeds the maximum allowed by the mandate.",
-        "The sector is excluded as it involves retail and energy.",
-        "The structure is acceptable but not unitranche or preferred term loan."
+        "Sector touches retail and fuel distribution, both on exclusion list.",
+        "Leverage at 5.8x is above 5.0x maximum.",
+        "High proportion of EBITDA add-backs could overstate earnings."
       ],
-      "rationale": "The deal exceeds the maximum leverage threshold and operates in an excluded sector.",
-      "input_tokens": 470,
-      "output_tokens": 161,
-      "elapsed_seconds": 2.4
+      "rationale": "EBITDA size, senior secured structure and sponsor-backed nature align, but sector is explicitly excluded and leverage exceeds 5.0x cap.",
+      "input_tokens": 469,
+      "output_tokens": 392,
+      "elapsed_seconds": 9.71
     },
     {
       "model": "Gemini 3.1 Pro",
       "mandate_fit_score": 2,
       "company_name": "Project Meridian",
-      "sector": "Petrol Station and Convenience Retail",
+      "sector": "Retail / Energy",
       "adjusted_ebitda_m": 18.4,
       "leverage_x": 5.8,
       "flag_count": 3,
       "flags": [
-        "Operates in retail, energy, and oil/gas sectors, which are strictly excluded from the mandate.",
-        "Implied leverage of 5.8x (with tolerance up to 6.0x) breaches the 5.0x maximum leverage constraint.",
-        "High proportion of management add-backs ($4.1 million) accounts for over 22% of the adjusted EBITDA."
+        "Sector exclusion: The business operates in convenience retail and petrol/oil supply, directly violating multiple excluded sector constraints.",
+        "Leverage breach: The LTM LTV/leverage sits at 5.8x (with tolerance up to 6.0x), exceeding the strict 5.0x maximum mandate.",
+        "Quality of Earnings: Adjusted EBITDA includes $4.1m of management add-backs, representing a significant 22% of the total $18.4m figure."
       ],
-      "rationale": "Although the transaction is sponsor-backed, fits the EBITDA range, and utilizes a preferred structure, it critically fails the mandate by operating in explicitly excluded sectors (retail, energy, oil, gas) and exceeding the 5.0x maximum leverage threshold.",
+      "rationale": "The deal meets the EBITDA size, sponsor-backed requirement, and preferred debt structure, but is a definitive pass due to explicitly excluded sectors (retail, energy, oil/gas) and exceeding the maximum leverage constraint (5.8x vs 5.0x limit).",
       "input_tokens": 507,
-      "output_tokens": 261,
-      "elapsed_seconds": 16.09
+      "output_tokens": 287,
+      "elapsed_seconds": 19.01
     }
   ]
 }

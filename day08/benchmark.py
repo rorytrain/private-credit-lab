@@ -23,9 +23,12 @@ MANDATE = {
 
 MODELS = [
     {"provider": "anthropic", "model": "claude-haiku-4-5-20251001", "label": "Claude Haiku 4.5"},
+    {"provider": "openai", "model": "gpt-4.1-mini", "label": "GPT-4.1 mini"},
+    {"provider": "google", "model": "gemini-3.6-flash", "label": "Gemini 3.6 Flash"},
     {"provider": "anthropic", "model": "claude-sonnet-4-6", "label": "Claude Sonnet 4.6"},
+    {"provider": "openai", "model": "gpt-4.1", "label": "GPT-4.1"},
     {"provider": "anthropic", "model": "claude-opus-4-8", "label": "Claude Opus 4.8"},
-    {"provider": "openai", "model": "gpt-4o", "label": "GPT-4o"},
+    {"provider": "openai", "model": "o3", "label": "OpenAI o3"},
     {"provider": "google", "model": "gemini-3.1-pro-preview", "label": "Gemini 3.1 Pro"},
 ]
 
@@ -85,11 +88,13 @@ def call_anthropic(model, prompt):
 def call_openai(model, prompt):
     start = time.time()
     try:
-        response = openai_client.chat.completions.create(
-            model=model,
-            temperature=0,
-            messages=[{"role": "user", "content": prompt}]
-        )
+        kwargs = {
+            "model": model,
+            "messages": [{"role": "user", "content": prompt}]
+        }
+        if "o3" not in model.lower():
+            kwargs["temperature"] = 0
+        response = openai_client.chat.completions.create(**kwargs)
         elapsed = round(time.time() - start, 2)
         raw = response.choices[0].message.content
         input_tokens = response.usage.prompt_tokens
