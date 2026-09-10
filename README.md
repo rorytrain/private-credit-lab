@@ -14,7 +14,7 @@ Each day is self-contained with its own scripts, sample documents and lab notes.
 - **Day 04** - Compliance monitoring: financial extraction and covenant breach detection
 - **Day 05** - LP reporting: narrative generation from structured portfolio data
 - **Day 06** - Stress testing: edge cases, error handling and failure mode analysis
-- **Day 07** - Synthesis: interview narrative and production gap assessment
+- **Day 07** - Synthesis: build narrative, prompt engineering insight and production gap assessment
 
 ## Architecture & Data Flow
 
