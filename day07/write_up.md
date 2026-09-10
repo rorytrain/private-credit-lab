@@ -1,5 +1,6 @@
 ﻿# Private Credit Workflow Lab
 *Synthesis Document*
+
 *Rory Henry · September 2026*
 
 ---
