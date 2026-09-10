@@ -64,7 +64,7 @@ Prompts are structured to be declarative and mandate-specific, producing consist
 
 All eight days complete.
 
-## Footnote
+## Findings
 
 The Private Credit Workflow Lab is a Python prototype built across eight phases ('days') that simulates four core workflows from an institutional private credit platform: deal triage, document ingestion, covenant comparison and compliance monitoring. Each workflow takes unstructured financial documents (CIMs, credit agreements and borrower updates) and uses Claude Sonnet 4.6 via the Anthropic API to extract structured data, apply analytical judgment and produce auditable outputs. The architecture is deliberately simple: declarative prompts at zero temperature, JSON extraction, Python rule engines and file-based logging. The simplicity is intentional; it demonstrates that meaningful workflow automation does not require complex infrastructure, but instead leans heavily on precise prompt design and a well-defined data contract.
 
