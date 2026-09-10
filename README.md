@@ -34,7 +34,7 @@ Input Docs (CIMs / Credit Agreements / Financials)
 - Anthropic SDK 0.111.0
 - OpenAI SDK 3.11.0
 - google-genai SDK 0.8.6
-- Models: claude-haiku-4-5-20251001, claude-sonnet-4-6, claude-opus-4-8, gpt-4o, gemini-3.1-pro-preview
+- Models: claude-haiku-4-5-20251001, claude-sonnet-4-6, claude-opus-4-8, gpt-4.1-mini, gpt-4.1, o3, gemini-3.6-flash, gemini-3.1-pro-preview
 - Libraries: python-dotenv, csv, json
 
 
@@ -74,8 +74,8 @@ The deeper insight the lab surfaces is about the nature of the harness rather th
 
 The lab is a concrete, working instance of the argument that the most immediate ROI from generative AI in financial services is not model sophistication but workflow integration: replacing the unstructured cognitive labour that sits between data ingestion and decision output.
 
-Day 08 extended the lab into model benchmarking, running the same CIM triage workflow across five models from three vendors: Claude Haiku 4.5, Claude Sonnet 4.6 and Claude Opus 4.8 from Anthropic, GPT-4o from OpenAI and Gemini 3.1 Pro from Google. The benchmark measured mandate fit score, flag depth, token consumption and response latency across three deals spanning a borderline pass, a cleaner pass and a hard fail.
+Day 08 extended the lab into model benchmarking, structured as a tier-based comparison across eight models from three vendors: Claude Haiku 4.5, Sonnet 4.6 and Opus 4.8 from Anthropic, GPT-4.1 mini, GPT-4.1 and o3 from OpenAI and Gemini 3.6 Flash and Gemini 3.1 Pro from Google. The benchmark measured mandate fit score, flag depth, token consumption and response latency across three deals spanning a borderline pass, a cleaner pass and a hard fail. The tier-based design pairs models at equivalent capability and cost points across vendors, producing findings that are analytically defensible rather than superficially comparative.
 
-The most significant finding was on mandate discipline. On the hard fail deal, Opus 4.8 scored it 1, Sonnet 4.6, Gemini 3.1 Pro and Haiku all scored it 2 and GPT-4o scored it 3. GPT-4o was the most lenient on a deal that should be declined outright. On the borderline pass, GPT-4o returned a score of 10 with zero flags while Sonnet returned 8 with four flags. In a regulated credit context, a model that passes deals cleanly without surfacing concerns is a liability rather than an asset.
+The most significant finding was on flag depth at the budget tier. GPT-4.1 mini returned zero flags on both passing deals while scoring them at 9. A model that scores correctly but surfaces no concerns is not useful in a credit workflow where the flags are the primary analytical output. Haiku and Gemini 3.6 Flash both returned two flags on the same documents at comparable scores, making them meaningfully more useful for triage at equivalent cost and speed. On mandate discipline, Sonnet 4.6 and Opus 4.8 scored the hard fail at 1, the most conservative result across all eight models. GPT-4.1 mini was the most lenient at 3. The remaining models clustered at 2.
 
-Sonnet 4.6 produced the most flags and the most conservative scores consistently across all three deals. For a private credit triage workflow where analytical depth and mandate discipline matter more than speed or cost, Sonnet is the right model. Haiku and GPT-4o are competitive for high-volume first-pass filtering where latency and cost are the primary constraints. Gemini 3.1 Pro was the slowest model tested, averaging 15 seconds per call compared to an average of 4 seconds across the other four models.
+Gemini 3.1 Pro was the slowest model tested, reaching 37 seconds on one document against a GPT-4.1 average of under 2 seconds. o3 produced substantially more output tokens than any other model, consistent with its reasoning-first architecture, but the additional depth did not translate into materially different scores or flag counts on structured extraction tasks of this type. For a private credit triage workflow where analytical conservatism and flag depth matter more than speed or cost, Sonnet 4.6 remains the right model. The benchmarking exercise confirmed that conclusion empirically rather than by assumption.
