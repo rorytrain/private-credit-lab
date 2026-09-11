@@ -75,3 +75,8 @@ Day 08 put the harness claim under real pressure by asking whether that judgment
 Taken together, that is the finding worth sitting with: the benchmark's value wasn't confirming the right model had already been chosen. It was that a harness built to interrogate rather than trust a model's output would have caught it if the wrong one had been.
 
 The full reasoning is set out across two documents, deliberately kept separate rather than merged into one. [`day07/write_up.md`](day07/write_up.md) is the original synthesis, written at what was meant to be the lab's endpoint: the four workflows, the production gap and the harness conclusion above, reached before Day 08 existed. [`day08/write_up.md`](day08/write_up.md) carries that same document forward with a Phase 8 section added, the benchmark that followed from taking the Day 07 conclusion seriously enough to test it against seven other models. Read in order, the two show the reasoning happening rather than a finished argument presented after the fact. Day-by-day build notes sit alongside both, in each day's folder.
+
+## Author
+
+Rory Henry  
+[linkedin.com/in/roryhenry](https://linkedin.com/in/roryhenry)
