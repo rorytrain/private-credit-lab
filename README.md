@@ -2,7 +2,7 @@
 
 A hands-on lab built in Python across eight phases using the Anthropic, OpenAI and Google APIs.
 
-The lab simulates four core workflows from a private credit alternatives platform: deal triage, document ingestion, covenant compliance monitoring and LP portfolio reporting. It was built to demonstrate applied AI prototyping capability in a private credit workflow context.
+The lab simulates four core workflows from a private credit alternatives platform, deal triage, document ingestion, covenant compliance monitoring and LP portfolio reporting, then tests the harness that runs them against seven further models from two other vendors. It was built to demonstrate applied AI prototyping capability in a private credit workflow context.
 
 ## Structure
 
@@ -14,8 +14,8 @@ Each day is self-contained with its own scripts, sample documents and lab notes.
 - **Day 04** - Compliance monitoring: financial extraction and covenant breach detection
 - **Day 05** - LP reporting: narrative generation from structured portfolio data
 - **Day 06** - Stress testing: edge cases, error handling and failure mode analysis
-- **Day 07** - Synthesis: build narrative, prompt engineering insight and production gap assessment
-- **Day 08** - Model benchmarking: same workflows run against multiple models for comparative evaluation
+- **Day 07** - Synthesis: build narrative, prompt engineering insight and production gap assessment. Originally scoped as the lab's endpoint.
+- **Day 08** - Model benchmarking: the Day 07 conclusion, that the harness rather than the model was the durable asset, raised the question of whether that held across vendors. Day 08 tests it against seven further models.
 
 ## Architecture & Data Flow
 
@@ -62,24 +62,16 @@ Prompts are structured to be declarative and mandate-specific, producing consist
 
 ## Status
 
-All eight days complete.
+All eight days complete. Days 01 through 07 complete the originally scoped lab; Day 08 extends it to test the harness against seven further models.
 
 ## Findings
 
-The Private Credit Workflow Lab is a Python prototype built across eight phases ('days') that simulates four core workflows from an institutional private credit platform: deal triage, document ingestion, covenant comparison and compliance monitoring. Each workflow takes unstructured financial documents (CIMs, credit agreements and borrower updates) and uses Claude Sonnet 4.6 via the Anthropic API to extract structured data, apply analytical judgment and produce auditable outputs. The architecture is deliberately simple: declarative prompts at zero temperature, JSON extraction, Python rule engines and file-based logging. The simplicity is intentional; it demonstrates that meaningful workflow automation does not require complex infrastructure, but instead leans heavily on precise prompt design and a well-defined data contract.
+The lab's central claim is that durable value in this kind of workflow sits in the harness rather than the model: the schema that enforces output structure, the validation layer that checks a model's claims rather than accepting them and the audit trail that makes a decision reviewable after the fact. Everything else in the lab, four private credit workflows and an eight-model benchmark across three vendors, exists to test that claim rather than assert it.
 
-The business value being demonstrated is the automation of cognitive workflows that currently consume significant analyst time in private credit operations. A junior analyst reading a CIM to assess mandate fit, a credit officer cross-referencing two credit agreements for covenant deviations, a portfolio manager checking monthly borrower updates for covenant breaches. Each of these tasks involves reading unstructured documents, applying domain-specific judgment and producing a structured output. The lab shows that Claude can perform all three steps reliably when the prompt is framed with sufficient domain specificity. The triage script scores deals against a defined mandate. The covenant comparison script identifies deviations with severity ratings. The compliance monitor distinguishes between a borrower confirming compliance and a borrower hedging. None of that analytical output was explicitly programmed, it emerged from role framing and prompt precision.
+The clearest evidence for it is the CIM triage script's add-backs catch: unprompted, it derived that one deal's management add-backs represented 28.7% of adjusted EBITDA, recomputed leverage on an unadjusted basis to 7.5x against a headline 5.8x and flagged the gap. Nothing in the source document stated that figure directly. That is the difference between extraction and analytical judgment, and it recurs across the lab: the covenant comparison script surfacing favourable deviations it wasn't asked to look for, the compliance monitor distinguishing a borrower's clean compliance confirmation from a hedged one, the LP reporting script connecting an early triage flag to a subsequent covenant breach without being told the two were related.
 
-The deeper insight the lab surfaces is about the nature of the harness rather than the model. The model is text in, text out: stateless, context-bound and only as analytically precise as the prompt that frames it. What the lab actually builds is a lightweight harness: context management, output parsing, rule validation, error handling and audit logging. That distinction matters for the production gap conversation on Days 06 and 07 and it maps directly to the broader industry debate about where agentic AI creates durable enterprise value.
+Day 08 put the harness claim under real pressure by asking whether that judgment was a property of Sonnet 4.6 or of the harness itself, and ran the same triage workflow unchanged against eight models from three vendors. The result that mattered was not a score. GPT-4.1 mini scored both passing deals correctly and returned zero analytical flags on either. Haiku 4.5 and Gemini 3.6 Flash, priced and positioned at the same tier, each returned two. A model that scores correctly and surfaces nothing is not a cheaper version of a working tool, and the only reason that gap was visible at all is that the harness was built to check for it, not just to accept a score. Sonnet 4.6 and Opus 4.8 were, separately, the most conservative models tested on the hard-fail deal, scoring it 1 against a lenient 3 from GPT-4.1 mini.
 
-The lab is a concrete, working instance of the argument that the most immediate ROI from generative AI in financial services is not model sophistication but workflow integration: replacing the unstructured cognitive labour that sits between data ingestion and decision output.
+Taken together, that is the finding worth sitting with: the benchmark's value wasn't confirming the right model had already been chosen. It was that a harness built to interrogate rather than trust a model's output would have caught it if the wrong one had been.
 
-Day 08 extended the lab into model benchmarking, structured as a tier-based comparison across eight models from three vendors: Claude Haiku 4.5, Sonnet 4.6 and Opus 4.8 from Anthropic, GPT-4.1 mini, GPT-4.1 and o3 from OpenAI and Gemini 3.6 Flash and Gemini 3.1 Pro from Google. The benchmark measured mandate fit score, flag depth, token consumption and response latency across three deals spanning a borderline pass, a cleaner pass and a hard fail. The tier-based design pairs models at equivalent capability and cost points across vendors, producing findings that are analytically defensible rather than superficially comparative.
-
-The most significant finding was on flag depth at the budget tier. GPT-4.1 mini returned zero flags on both passing deals while scoring them at 9. A model that scores correctly but surfaces no concerns is not useful in a credit workflow where the flags are the primary analytical output. Haiku and Gemini 3.6 Flash both returned two flags on the same documents at comparable scores, making them meaningfully more useful for triage at equivalent cost and speed. On mandate discipline, Sonnet 4.6 and Opus 4.8 scored the hard fail at 1, the most conservative result across all eight models. GPT-4.1 mini was the most lenient at 3. The remaining models clustered at 2.
-
-Gemini 3.1 Pro was the slowest model tested, reaching 37 seconds on one document against a GPT-4.1 average of under 2 seconds. o3 produced substantially more output tokens than any other model, consistent with its reasoning-first architecture, but the additional depth did not translate into materially different scores or flag counts on structured extraction tasks of this type. For a private credit triage workflow where analytical conservatism and flag depth matter more than speed or cost, Sonnet 4.6 remains the right model.
-
-The more precise observation is that the benchmark would have caught a wrong choice. Cost and speed pull naturally toward the budget tier. Only flag depth exposes the risk of making that move. The value of the exercise is the detection capability, not the verdict.
-
-The benchmark surfaces a broader architectural principle. Models are replaceable compute. The durable value sits in the surrounding harness: schema enforcement, audit logging and exception routing, none of which are model-dependent. A vendor switch changes the API call. It does not change the workflow.
+The full reasoning, the workflow-by-workflow detail and the production gap the prototype deliberately doesn't close are set out in [`write_up.md`](day08/write_up.md), alongside the day-by-day build notes in each day's folder.
