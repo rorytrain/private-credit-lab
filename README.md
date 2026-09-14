@@ -59,7 +59,7 @@ API keys are excluded from this repository by `.gitignore`. You will need API ac
 
 ## Design principles
 
-Prompts are structured to be declarative and mandate-specific, producing consistent and auditable outputs suitable for a regulated workflow context. Temperature is set to zero throughout to maximise predictability. Each script is self-contained and requires only the relevant vendor API keys in a local .env file.
+Prompts are structured to be declarative and mandate-specific, producing consistent and auditable outputs suitable for a regulated workflow context. Temperature is set to zero for models that support it. Current generation models from Anthropic have deprecated the parameter, moving determinism inside the model through adaptive thinking. The harness responds by validating outputs rather than constraining inputs. Each script is self-contained and requires only the relevant vendor API keys in a local .env file.
 
 ## Status
 
