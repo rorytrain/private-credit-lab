@@ -6,7 +6,7 @@ The lab simulates four core workflows from a private credit alternatives platfor
 
 ## Summary
 
-A Python harness simulating four private credit workflows: deal triage, covenant comparison, compliance monitoring and LP reporting, benchmarked across eight models from three vendors. The central finding: durable value sits in the harness, not the model. A model that scores correctly but surfaces no flags is not a cheaper version of a working tool. And when Anthropic deprecated temperature zero in their current generation models, the harness adapted: output validation replaced input constraint. The prompt remains the primary lever throughout.
+A Python harness running four private-credit workflows and benchmarked across eight models. The finding: the harness drives analytical quality, not the model. Schema-forced reconciliation surfaced gaps that raw scores hid, including the persistent zero-flag failure mode. When temperature controls disappeared in newer models, the harness stayed stable by validating outputs instead of constraining inputs. The prompt sets the lens; the harness enforces the standard.
 
 ## Structure
 
