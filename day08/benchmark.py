@@ -25,9 +25,9 @@ MODELS = [
     {"provider": "anthropic", "model": "claude-haiku-4-5-20251001", "label": "Claude Haiku 4.5"},
     {"provider": "openai", "model": "gpt-4.1-mini", "label": "GPT-4.1 mini"},
     {"provider": "google", "model": "gemini-3.6-flash", "label": "Gemini 3.6 Flash"},
-    {"provider": "anthropic", "model": "claude-sonnet-4-6", "label": "Claude Sonnet 4.6"},
-    {"provider": "openai", "model": "gpt-4.1", "label": "GPT-4.1"},
-    {"provider": "anthropic", "model": "claude-opus-4-8", "label": "Claude Opus 4.8"},
+    {"provider": "anthropic", "model": "claude-sonnet-5", "label": "Claude Sonnet 5"},
+    {"provider": "openai", "model": "gpt-5.4", "label": "GPT-5.4"},
+    {"provider": "anthropic", "model": "claude-opus-5", "label": "Claude Opus 5"},
     {"provider": "openai", "model": "o3", "label": "OpenAI o3"},
     {"provider": "google", "model": "gemini-3.1-pro-preview", "label": "Gemini 3.1 Pro"},
 ]
@@ -71,14 +71,20 @@ def call_anthropic(model, prompt):
     try:
         kwargs = {
             "model": model,
-            "max_tokens": 1024,
+            "max_tokens": 16000,
             "messages": [{"role": "user", "content": prompt}]
         }
-        if "opus" not in model.lower():
+        if "haiku" in model.lower():
             kwargs["temperature"] = 0
         response = anthropic_client.messages.create(**kwargs)
         elapsed = round(time.time() - start, 2)
-        raw = response.content[0].text
+        raw = None
+        for block in response.content:
+            if hasattr(block, "text"):
+                raw = block.text
+                break
+        if raw is None:
+            return None, 0, 0, 0, "No text block in response"
         input_tokens = response.usage.input_tokens
         output_tokens = response.usage.output_tokens
         return raw, input_tokens, output_tokens, elapsed, None
