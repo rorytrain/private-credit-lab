@@ -4,6 +4,10 @@ A hands-on lab built in Python across eight phases using the Anthropic, OpenAI a
 
 The lab simulates four core workflows from a private credit alternatives platform, deal triage, document ingestion, covenant compliance monitoring and LP portfolio reporting, then tests the harness that runs them against seven further models from two other vendors. It was built to demonstrate applied AI prototyping capability in a private credit workflow context.
 
+## Summary
+
+A Python harness simulating four private credit workflows — deal triage, covenant comparison, compliance monitoring and LP reporting — benchmarked across eight models from three vendors. The central finding: durable value sits in the harness, not the model. A model that scores correctly but surfaces no flags is not a cheaper version of a working tool. And when Anthropic deprecated temperature zero in their current generation models, the harness adapted: output validation replaced input constraint. The prompt remains the primary lever throughout.
+
 ## Structure
 
 Each day is self-contained with its own scripts, sample documents and lab notes.
