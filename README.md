@@ -34,7 +34,8 @@ Input Docs (CIMs / Credit Agreements / Financials)
 - Anthropic SDK 0.111.0
 - OpenAI SDK 3.11.0
 - google-genai SDK 0.8.6
-- Models: claude-haiku-4-5-20251001, claude-sonnet-4-6, claude-opus-4-8, gpt-4.1-mini, gpt-4.1, o3, gemini-3.6-flash, gemini-3.1-pro-preview
+- Models (generation 1): claude-haiku-4-5-20251001, claude-sonnet-4-6, claude-opus-4-8, gpt-4.1-mini, gpt-4.1, o3, gemini-3.6-flash, gemini-3.1-pro-preview
+- Models (generation 2): claude-haiku-4-5-20251001, claude-sonnet-5, claude-opus-5, gpt-4.1-mini, gpt-5.4, o3, gemini-3.6-flash, gemini-3.1-pro-preview
 - Libraries: python-dotenv, csv, json
 
 
@@ -75,6 +76,10 @@ Temperature zero removes variance, it doesn't remove ambiguity. Where the prompt
 Day 08 exists to test that same principle under a variable the first seven phases held constant: the model itself. The finding is not which model scored best. It is that the harness caught a failure mode a scoreboard alone would have hidden: GPT-4.1 mini scored both passing deals correctly, a 9, and returned zero analytical flags on either, while Haiku 4.5 and Gemini 3.6 Flash, priced and positioned at the same tier, each returned two flags on the same documents at comparable scores. A model that scores correctly and surfaces nothing is not a cheaper version of a working tool, it is a different tool that happens to agree with the right answer on the documents it was shown, and the only reason that gap was visible at all is that the harness was built to check flag depth rather than accept a score on its own. Sonnet 4.6 and Opus 4.8 were, separately, the most conservative models tested on the hard-fail deal, scoring it 1 against a lenient 3 from GPT-4.1 mini. The benchmark's value was never confirming the right model had already been chosen. It was demonstrating that a harness built to interrogate rather than trust a model's output would have caught it if the wrong one had been.
 
 The full reasoning is set out across two documents, deliberately kept separate rather than merged into one. [`day07/write_up.md`](day07/write_up.md) is the original synthesis, written at what was meant to be the lab's endpoint: the four workflows, the production gap and the harness conclusion above, reached before Day 08 existed. [`day08/write_up.md`](day08/write_up.md) carries that same document forward with a Phase 8 section added, the benchmark that followed from taking the Day 07 conclusion seriously enough to test it against seven other models. Read in order, the two show the reasoning happening rather than a finished argument presented after the fact. Day-by-day build notes sit alongside both, in each day's folder.
+
+*A second benchmark run was conducted in September 2026* using current generation models, replacing Sonnet 4.6 with Sonnet 5 and Opus 4.8 with Opus 5 on the Anthropic side and GPT-4.1 with GPT-5.4 on the OpenAI side. The results confirmed and sharpened the original findings. Opus 5 produced the highest flag count of any model tested across both runs, scoring the hard fail at 1 with six flags and the borderline pass at 8 with five. The zero-flag problem at the GPT-4.1 mini budget tier persisted unchanged into the second run.
+
+The most significant architectural finding from the second run was the deprecation of the temperature parameter in Sonnet 5 and Opus 5. The lab was built on temperature zero as the primary mechanism for deterministic output. Anthropic's newer models have moved that determinism inside the model through adaptive thinking, removing the external control entirely. Sonnet 5 without temperature zero produced results as conservative as Sonnet 4.6 with it, suggesting the analytical discipline has been internalised rather than externally enforced. The implication for harness design is that output validation becomes more important as input-level variance controls become less available.
 
 ## Author
 
